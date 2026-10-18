@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            padding: 30px 20px;
+        }
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        .top-header {
+            background-color: rgb(235, 238, 251);
+            padding: 30px 35px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .avatar {
+            width: 110px;
+            height: 147px;
+            flex-shrink: 0;
+            background-color: #d0d0d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 13px;
+        }
+        .header-info {
+            flex: 1;
+        }
+        .header-name {
+            font-size: 26px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 14px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px 20px;
+        }
+        .info-row {
+            display: flex;
+            font-size: 13px;
+        }
+        .info-row .label {
+             width: 60px;
+            font-weight: 500;
+            color: #555;
+            flex-shrink: 0;
+        }
+        .info-row .text {
+            flex: 1;
+            color: #333;
+        }
+        .body-content {
+            padding: 30px 35px;
+        }
+        .section {
+            margin-bottom: 26px;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        .section h2 {
+            font-size: 16px;
+            color: rgb(46, 81, 219);
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-bottom: 14px;
+        }
+        .item {
+            margin-bottom: 14px;
+        }
+        .item:last-child {
+            margin-bottom: 0;
+        }
+        .education-title,
+        .intern-title,
+        .project-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        .education-title .time,
+        .intern-title .time,
+        .project-title .time {
+            font-weight: bold;
+        }
+        .item .school {
+            font-weight: bold;
+        }
+        .item .major {
+            font-size: 13px;
+        }
+        .item p {
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+        ul {
+            padding-left: 20px;
+            color: #333;
+            font-size: 13px;
+        }
+        p {
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skills-tags span {
+            background-color: rgb(235, 238, 251);
+            color: rgb(46, 81, 219);
+            padding: 4px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+            .resume {
+                width: 210mm;
+                min-height: 297mm;
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="top-header">
+            <div class="header-info">
+                <div class="header-name">钟莉</div>
+                <div class="info-grid">
+                    <div class="info-row">
+                        <span class="label">电话</span>
+                        <span class="text">18038907126</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">邮箱</span>
+                        <span class="text">a333155oo@163.com</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">性别</span>
+                        <span class="text">女</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">年龄</span>
+                        <span class="text">20</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="avatar">照片（3:4）</div> -->
+        </div>
+
+        <div class="body-content">
+            <!-- 教育经历 -->
+            <div class="section">
+                <h2>教育经历</h2>
+                <div class="item">
+                    <div class="education-title">
+                        <span class="time">2024.09 - 至今</span>
+                        <span class="school">广东工商职业技术大学</span>
+                    </div>
+                    <span class="major">计算机应用技术 | 大专</span>
+                    <p>主修课程：前端网页综合设计综合实训、JavaScript/jQuery技术、Java程序设计课程、python程序设计、网络设备配置与管理等</p>
+                </div>
+            </div>
+
+            <!-- 项目经历 -->
+            <div class="section">
+                <h2>项目经历</h2>
+                <div class="item">
+                     <div class="project-title">
+                        <strong>个人简历网站</strong>
+                        <span class="time">2026.09</span>
+                     </div>
+                     <p>项目简介：使用原生HTML+CSS开发个人在线简历网页，页面布局整洁，支持浏览器预览，可直接打印成简历，用于展示个人信息与前端学习成果。</p>
+                     <p>技术选型：HTML5、CSS3，VS Code开发，Gitee托管代码，Live Server本地调试。</p>
+                     <p>工作内容：独立完成页面结构搭建，使用div+CSS完成页面排版，调整样式，修复页面空白、布局错乱等问题，完成代码上传至Gitee。</p>
+                     <p>项目亮点：采用模块化结构编写代码，代码层次清晰；掌握网页嵌套结构，锻炼CSS布局能力，项目代码开源托管可在线访问。</p>
+                </div>
+                <div class="item">
+                    <div class="project-title">
+                        <strong>简易待办清单</strong>
+                        <span class="time">2026.09</span>
+                    </div>
+                    <p>项目简介：原生JS实现的待办任务管理网页，可以添加、勾选、删除任务</p>
+                    <p>技术选型：HTML5、CSS3、原生JavaScript</p>
+                    <p>工作内容：搭建页面结构，编写JS实现任务增删改功能，本地存储保存任务，刷新页面数据不丢失</p>
+                    <p>项目亮点：数组管理任务数据，动态生成DOM元素；界面简洁易用</p>
+                </div>
+                <div class="item">
+                    <div class="project-title">
+                        <strong>好物商品展示网站</strong>
+                        <span class="time">2026.10</span>
+                    </div>
+                    <p>项目简介：基于HTML+CSS+原生JS开发商品展示网页，用于展示电脑、耳机、键盘等日常好物</p>
+                    <p>工作内容：独立完成页面搭建，实现顶部轮播图、商品卡片渲染、加入购物车交互，优化图片显示防止拉伸变形</p>
+                    <p>项目亮点：实现图片object-fit适配，动态渲染商品数据；页面模块划分清晰，交互友好</p>
+                </div>
+            </div>
+
+            <!-- 个人技能 -->
+            <div class="section">
+                <h2>个人技能</h2>
+                <div class="skills-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript基础</span>
+                    <span>Flex布局</span>
+                    <span>Git / Gitee代码托管</span>
+                    <span>VS Code</span>
+                    <span>浏览器调试</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
